@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF5FD8B1-41F6-44BA-8A20-B1B0F1C68C06}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Medical.Apartment.Common</RootNamespace>
+    <AssemblyName>Medical.Apartment.SL.Common</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Medical.Apartment.Common\AspRole.cs">
+      <Link>AspRole.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\AspUser.cs">
+      <Link>AspUser.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\City.Generated.cs">
+      <Link>City.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Component.Generated.cs">
+      <Link>Component.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\ContactInformation.cs">
+      <Link>ContactInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\ContactType.cs">
+      <Link>ContactType.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Country.Generated.cs">
+      <Link>Country.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Customer.Generated.cs">
+      <Link>Customer.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\DeploymentInfo.cs">
+      <Link>DeploymentInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\District.Generated.cs">
+      <Link>District.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Doctor.Generated.cs">
+      <Link>Doctor.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Enums.cs">
+      <Link>Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Image.Generated.cs">
+      <Link>Image.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\ImageType.cs">
+      <Link>ImageType.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Medicine.Generated.cs">
+      <Link>Medicine.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\MedicineInput.Generated.cs">
+      <Link>MedicineInput.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\ModuleTypes.cs">
+      <Link>ModuleTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Organisation.Extended.cs">
+      <Link>Organisation.Extended.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Organisation.Generated.cs">
+      <Link>Organisation.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\PeriodType.cs">
+      <Link>PeriodType.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Record.cs">
+      <Link>Record.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoleComponentPermission.Extended.cs">
+      <Link>RoleComponentPermission.Extended.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoleComponentPermission.Generated.cs">
+      <Link>RoleComponentPermission.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Room.Generated.cs">
+      <Link>Room.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoomEquipment.Generated.cs">
+      <Link>RoomEquipment.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoomService.Generated.cs">
+      <Link>RoomService.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoomStatus.cs">
+      <Link>RoomStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\RoomType.Generated.cs">
+      <Link>RoomType.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Service.Generated.cs">
+      <Link>Service.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Site.Extended.cs">
+      <Link>Site.Extended.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Site.Generated.cs">
+      <Link>Site.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\TagVersion.cs">
+      <Link>TagVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Treatment.Generated.cs">
+      <Link>Treatment.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\TreatmentMedicine.Generated.cs">
+      <Link>TreatmentMedicine.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\TreatmentService.Generated.cs">
+      <Link>TreatmentService.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\UserRoleAuth.Extended.cs">
+      <Link>UserRoleAuth.Extended.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\UserRoleAuth.Generated.cs">
+      <Link>UserRoleAuth.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\Medical.Apartment.Common\Utilities.cs">
+      <Link>Utilities.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

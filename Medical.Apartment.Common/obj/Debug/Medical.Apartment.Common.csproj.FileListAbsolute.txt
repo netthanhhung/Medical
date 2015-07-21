@@ -1,0 +1,4 @@
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Common\bin\Debug\Medical.Apartment.Common.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Common\bin\Debug\Medical.Apartment.Common.pdb
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Common\obj\Debug\Medical.Apartment.Common.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Common\obj\Debug\Medical.Apartment.Common.pdb

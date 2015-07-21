@@ -1,0 +1,2 @@
+E:\Chanh\Solution\Medical\Medical.Apartment.Silverlight.UI
+Generated_Code\Medical.Apartment.Web.UI.g.cs

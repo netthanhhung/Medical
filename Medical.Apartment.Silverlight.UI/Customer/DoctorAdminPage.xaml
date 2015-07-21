@@ -1,0 +1,177 @@
+﻿<navigation:Page x:Class="Medical.Apartment.Silverlight.UI.DoctorAdminPage" Title="Medical Centre"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:Medical.Apartment.Silverlight.UI"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"             
+    xmlns:bg="clr-namespace:TiledBG;assembly=TiledBG"   
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <Grid Style="{StaticResource LayoutRootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer x:Name="scrollViewerDoctors" HorizontalScrollBarVisibility="Disabled" 
+                              VerticalScrollBarVisibility="Auto"
+                              BorderThickness="0" Padding="0">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                    Height="Auto"></RowDefinition>
+                    <RowDefinition
+                    Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <local:ClippedGrid
+                Background="{StaticResource DefaultBackgroundGradientBrush}">
+                    <local:Highlight
+                    HighlightBrush="{StaticResource CustomerBrush}"></local:Highlight>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                            Width="*"></ColumnDefinition>
+                            <ColumnDefinition
+                            Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Margin="20,0,0,0" Orientation="Horizontal">
+                            <TextBlock
+                            x:Name="uiTitle"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="Doctor Administrattion"></TextBlock>
+                            <TextBlock
+                            x:Name="uiParamsDisplay"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text=""></TextBlock>
+                        </StackPanel>
+
+                    </Grid>
+                </local:ClippedGrid>
+                <local:ClippedGrid Background="{StaticResource EmployeeImageBrush}"
+                               Grid.Row="1" Grid.ColumnSpan="6"/>
+                <local:ClippedGrid
+                    Grid.Row="1" Grid.ColumnSpan="6"
+                    Margin="10" Opacity="0.9">
+
+                    <local:ClippedGrid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <bg:TiledBGControl BorderThickness="0" TiledImageSource="/Medical.Apartment.Silverlight.UI;component/Assets/Images/carbon-fiber-10x10.png"/>
+                        <Grid x:Name="gridDoctor">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <telerik:RadGridView
+                                Margin="10,5,0,5"
+                                x:Name="gvwDoctors"
+                                AutoGenerateColumns="False"
+                                ShowGroupPanel="False" IsFilteringAllowed="False" SelectionMode="Single"
+                                CanUserDeleteRows="False" CanUserInsertRows="True" ShowInsertRow="True"
+                                Grid.Column="0">
+                                    <telerik:RadGridView.Resources>
+                                        <Style TargetType="TextBlock" BasedOn="{x:Null}"/>
+                                        <Style TargetType="CheckBox" BasedOn="{x:Null}"/>
+                                    </telerik:RadGridView.Resources>
+                                    <telerik:RadGridView.Columns>
+                                        <telerik:GridViewDataColumn
+                                            UniqueName="FirstName"
+                                            DataMemberBinding="{Binding FirstName}"
+                                            Header="First Name" 
+                                            Width="150">
+                                        </telerik:GridViewDataColumn>
+                                        <telerik:GridViewDataColumn
+                                            UniqueName="LastName"
+                                            DataMemberBinding="{Binding LastName}"
+                                            Header="Last Name"
+                                            Width="150">
+                                        </telerik:GridViewDataColumn>
+                                        <telerik:GridViewComboBoxColumn
+                                           DataMemberBinding="{Binding SiteId}"
+                                           UniqueName="Site" Header="Site"
+                                           SelectedValueMemberPath="SiteId" HeaderTextAlignment="Center"
+                                           DisplayMemberPath="Name" 
+                                           Width="150">
+                                        </telerik:GridViewComboBoxColumn>
+                                    
+                                        <telerik:GridViewDataColumn
+                                            UniqueName="DoB"
+                                            DataMemberBinding="{Binding DoB}"
+                                            Header="DoB" DataFormatString="{} {0:dd-MMM-yyyy}"
+                                            Width="100">
+                                        </telerik:GridViewDataColumn>
+                                        <telerik:GridViewComboBoxColumn
+                                           DataMemberBinding="{Binding Gender}"
+                                           UniqueName="Gender" Header="Gender"
+                                           SelectedValueMemberPath="Key" HeaderTextAlignment="Center"
+                                           DisplayMemberPath="Value" 
+                                           Width="100">
+                                        </telerik:GridViewComboBoxColumn>
+
+                                        <telerik:GridViewDataColumn
+                                            UniqueName="Position"
+                                            DataMemberBinding="{Binding Position}"
+                                            Header="Position" 
+                                            Width="150" />
+                                            
+                                            <telerik:GridViewDataColumn Width="100" Header="Inactive" UniqueName="Inactive">
+                                            <telerik:GridViewDataColumn.CellStyle>
+                                                <Style TargetType="telerik:GridViewCell">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="telerik:GridViewCell">
+                                                                <StackPanel>
+                                                                    <CheckBox Margin="5, 0, 0, 0"
+                                                                    VerticalAlignment="Center"
+                                                                    IsChecked="{Binding IsLegacy, Mode=TwoWay}" />
+                                                                </StackPanel>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Style>
+                                            </telerik:GridViewDataColumn.CellStyle>
+                                        </telerik:GridViewDataColumn>
+                                    </telerik:RadGridView.Columns>
+                                </telerik:RadGridView>
+
+                                <local:ContactInformationPanel x:Name="ucCntactInfoPanel" Margin="25,5,5,5" 
+                                                        Grid.Row="1" Grid.Column="1"  ContactTypeId="5"></local:ContactInformationPanel>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1" Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <local:SingleClickButton x:Name="btnSaveDoctor" Height="25" Width="80" Grid.Column="1" Content="Save" 
+                            HorizontalAlignment="Right" Margin="10,0,5,10"/>
+                                <Button x:Name="btnCancelDoctor" Height="25" Width="80" Grid.Column="2" Content="Cancel" 
+                            HorizontalAlignment="Left" Margin="10,0,5,10"/>
+                            </Grid>
+
+                        </Grid>
+
+                    </local:ClippedGrid>
+                </local:ClippedGrid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+</navigation:Page>

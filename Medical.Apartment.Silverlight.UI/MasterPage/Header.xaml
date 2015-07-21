@@ -1,0 +1,49 @@
+﻿<UserControl
+    x:Class="Medical.Apartment.Silverlight.UI.Header"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Medical.Apartment.Silverlight.UI"
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls">
+
+    <Grid>
+        <Border
+            BorderThickness="0,0,0,1"
+            BorderBrush="{StaticResource HeaderBorderBrush}">
+
+            <Grid
+                VerticalAlignment="Bottom"
+                Background="{StaticResource HeaderBackgroundBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    x:Name="uiMenuBar"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <TextBlock
+                        x:Name="uiCurrencyExchange"
+                        Foreground="#BBA598"
+                        Margin="0,0,6,0"
+                        FontSize="8"></TextBlock>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                    <Image x:Name="uiLogo" Width="80" Height="40"
+                                Source="{StaticResource LogoSourceUrl}"
+                                Margin="0"></Image>
+                    <TextBlock
+                        x:Name="uiDeploymentInfo"
+                        Foreground="#BBA598"
+                        Margin="0,0,6,0"
+                        FontSize="8"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

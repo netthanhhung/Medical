@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Medical.Apartment.Web.UI" />
+      <xsd:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" />
+      <xsd:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ApartmentService_SelectSessionId_InputMessage">
+    <wsdl:part name="parameters" element="SelectSessionId" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SelectSessionId_OutputMessage">
+    <wsdl:part name="parameters" element="SelectSessionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="GetUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="GetUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetAppSettings_InputMessage">
+    <wsdl:part name="parameters" element="GetAppSettings" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetAppSettings_OutputMessage">
+    <wsdl:part name="parameters" element="GetAppSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetGlobalVariable_InputMessage">
+    <wsdl:part name="parameters" element="GetGlobalVariable" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetGlobalVariable_OutputMessage">
+    <wsdl:part name="parameters" element="GetGlobalVariableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetAspUser_InputMessage">
+    <wsdl:part name="parameters" element="GetAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="GetAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_DeleteAspUser_InputMessage">
+    <wsdl:part name="parameters" element="DeleteAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_DeleteAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_UnlockAspUser_InputMessage">
+    <wsdl:part name="parameters" element="UnlockAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_UnlockAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="UnlockAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveAspUser_InputMessage">
+    <wsdl:part name="parameters" element="SaveAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="SaveAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCountry_InputMessage">
+    <wsdl:part name="parameters" element="ListCountry" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCountry_OutputMessage">
+    <wsdl:part name="parameters" element="ListCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCity_InputMessage">
+    <wsdl:part name="parameters" element="ListCity" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCity_OutputMessage">
+    <wsdl:part name="parameters" element="ListCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListDistrict_InputMessage">
+    <wsdl:part name="parameters" element="ListDistrict" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="ListDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListContactInformation_InputMessage">
+    <wsdl:part name="parameters" element="ListContactInformation" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListContactInformation_OutputMessage">
+    <wsdl:part name="parameters" element="ListContactInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveContactInformation_InputMessage">
+    <wsdl:part name="parameters" element="SaveContactInformation" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveContactInformation_OutputMessage">
+    <wsdl:part name="parameters" element="SaveContactInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListOrganisation_InputMessage">
+    <wsdl:part name="parameters" element="ListOrganisation" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListOrganisation_OutputMessage">
+    <wsdl:part name="parameters" element="ListOrganisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListOrgAdminAspUser_InputMessage">
+    <wsdl:part name="parameters" element="ListOrgAdminAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListOrgAdminAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="ListOrgAdminAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveOrganisations_InputMessage">
+    <wsdl:part name="parameters" element="SaveOrganisations" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveOrganisations_OutputMessage">
+    <wsdl:part name="parameters" element="SaveOrganisationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetOrganisation_InputMessage">
+    <wsdl:part name="parameters" element="GetOrganisation" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetOrganisation_OutputMessage">
+    <wsdl:part name="parameters" element="GetOrganisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetOrganisationByCode_InputMessage">
+    <wsdl:part name="parameters" element="GetOrganisationByCode" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_GetOrganisationByCode_OutputMessage">
+    <wsdl:part name="parameters" element="GetOrganisationByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListSite_InputMessage">
+    <wsdl:part name="parameters" element="ListSite" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListSite_OutputMessage">
+    <wsdl:part name="parameters" element="ListSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveSite_InputMessage">
+    <wsdl:part name="parameters" element="SaveSite" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveSite_OutputMessage">
+    <wsdl:part name="parameters" element="SaveSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCustomer_InputMessage">
+    <wsdl:part name="parameters" element="ListCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="ListCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveCustomer_InputMessage">
+    <wsdl:part name="parameters" element="SaveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="SaveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListDoctor_InputMessage">
+    <wsdl:part name="parameters" element="ListDoctor" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="ListDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveDoctor_InputMessage">
+    <wsdl:part name="parameters" element="SaveDoctor" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="SaveDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListAspUser_InputMessage">
+    <wsdl:part name="parameters" element="ListAspUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListAspUser_OutputMessage">
+    <wsdl:part name="parameters" element="ListAspUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListUserName_InputMessage">
+    <wsdl:part name="parameters" element="ListUserName" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListUserName_OutputMessage">
+    <wsdl:part name="parameters" element="ListUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_UpdateMembershipUserName_InputMessage">
+    <wsdl:part name="parameters" element="UpdateMembershipUserName" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_UpdateMembershipUserName_OutputMessage">
+    <wsdl:part name="parameters" element="UpdateMembershipUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListComponent_InputMessage">
+    <wsdl:part name="parameters" element="ListComponent" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListComponent_OutputMessage">
+    <wsdl:part name="parameters" element="ListComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListRoleComponentPermission_InputMessage">
+    <wsdl:part name="parameters" element="ListRoleComponentPermission" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListRoleComponentPermission_OutputMessage">
+    <wsdl:part name="parameters" element="ListRoleComponentPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListRoleComponentPermissionByUser_InputMessage">
+    <wsdl:part name="parameters" element="ListRoleComponentPermissionByUser" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListRoleComponentPermissionByUser_OutputMessage">
+    <wsdl:part name="parameters" element="ListRoleComponentPermissionByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveRoleComponentPermission_InputMessage">
+    <wsdl:part name="parameters" element="SaveRoleComponentPermission" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveRoleComponentPermission_OutputMessage">
+    <wsdl:part name="parameters" element="SaveRoleComponentPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListAspRole_InputMessage">
+    <wsdl:part name="parameters" element="ListAspRole" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListAspRole_OutputMessage">
+    <wsdl:part name="parameters" element="ListAspRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveAspRole_InputMessage">
+    <wsdl:part name="parameters" element="SaveAspRole" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveAspRole_OutputMessage">
+    <wsdl:part name="parameters" element="SaveAspRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListUserRoleAuth_InputMessage">
+    <wsdl:part name="parameters" element="ListUserRoleAuth" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListUserRoleAuth_OutputMessage">
+    <wsdl:part name="parameters" element="ListUserRoleAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveUserRoleAuth_InputMessage">
+    <wsdl:part name="parameters" element="SaveUserRoleAuth" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveUserRoleAuth_OutputMessage">
+    <wsdl:part name="parameters" element="SaveUserRoleAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListMedicine_InputMessage">
+    <wsdl:part name="parameters" element="ListMedicine" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="ListMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveMedicine_InputMessage">
+    <wsdl:part name="parameters" element="SaveMedicine" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="SaveMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListSiteMedicineStatus_InputMessage">
+    <wsdl:part name="parameters" element="ListSiteMedicineStatus" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListSiteMedicineStatus_OutputMessage">
+    <wsdl:part name="parameters" element="ListSiteMedicineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListMedicineInput_InputMessage">
+    <wsdl:part name="parameters" element="ListMedicineInput" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListMedicineInput_OutputMessage">
+    <wsdl:part name="parameters" element="ListMedicineInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveMedicineInput_InputMessage">
+    <wsdl:part name="parameters" element="SaveMedicineInput" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveMedicineInput_OutputMessage">
+    <wsdl:part name="parameters" element="SaveMedicineInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListService_InputMessage">
+    <wsdl:part name="parameters" element="ListService" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListService_OutputMessage">
+    <wsdl:part name="parameters" element="ListServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveService_InputMessage">
+    <wsdl:part name="parameters" element="SaveService" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveService_OutputMessage">
+    <wsdl:part name="parameters" element="SaveServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListImage_InputMessage">
+    <wsdl:part name="parameters" element="ListImage" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListImage_OutputMessage">
+    <wsdl:part name="parameters" element="ListImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveImage_InputMessage">
+    <wsdl:part name="parameters" element="SaveImage" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveImage_OutputMessage">
+    <wsdl:part name="parameters" element="SaveImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatment_InputMessage">
+    <wsdl:part name="parameters" element="ListTreatment" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatment_OutputMessage">
+    <wsdl:part name="parameters" element="ListTreatmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatment_InputMessage">
+    <wsdl:part name="parameters" element="SaveTreatment" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatment_OutputMessage">
+    <wsdl:part name="parameters" element="SaveTreatmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatmentMedicine_InputMessage">
+    <wsdl:part name="parameters" element="ListTreatmentMedicine" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatmentMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="ListTreatmentMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatmentMedicine_InputMessage">
+    <wsdl:part name="parameters" element="SaveTreatmentMedicine" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatmentMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="SaveTreatmentMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatmentService_InputMessage">
+    <wsdl:part name="parameters" element="ListTreatmentService" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_ListTreatmentService_OutputMessage">
+    <wsdl:part name="parameters" element="ListTreatmentServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatmentService_InputMessage">
+    <wsdl:part name="parameters" element="SaveTreatmentService" />
+  </wsdl:message>
+  <wsdl:message name="ApartmentService_SaveTreatmentService_OutputMessage">
+    <wsdl:part name="parameters" element="SaveTreatmentServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ApartmentService">
+    <wsdl:operation name="SelectSessionId">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SelectSessionId" message="ApartmentService_SelectSessionId_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SelectSessionIdResponse" message="ApartmentService_SelectSessionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetUserLogin" message="ApartmentService_GetUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetUserLoginResponse" message="ApartmentService_GetUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppSettings">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetAppSettings" message="ApartmentService_GetAppSettings_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetAppSettingsResponse" message="ApartmentService_GetAppSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGlobalVariable">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetGlobalVariable" message="ApartmentService_GetGlobalVariable_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetGlobalVariableResponse" message="ApartmentService_GetGlobalVariable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ChangePassword" message="ApartmentService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ChangePasswordResponse" message="ApartmentService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetAspUser" message="ApartmentService_GetAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetAspUserResponse" message="ApartmentService_GetAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/DeleteAspUser" message="ApartmentService_DeleteAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/DeleteAspUserResponse" message="ApartmentService_DeleteAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/UnlockAspUser" message="ApartmentService_UnlockAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/UnlockAspUserResponse" message="ApartmentService_UnlockAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveAspUser" message="ApartmentService_SaveAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveAspUserResponse" message="ApartmentService_SaveAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCountry">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListCountry" message="ApartmentService_ListCountry_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListCountryResponse" message="ApartmentService_ListCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCity">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListCity" message="ApartmentService_ListCity_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListCityResponse" message="ApartmentService_ListCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDistrict">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListDistrict" message="ApartmentService_ListDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListDistrictResponse" message="ApartmentService_ListDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContactInformation">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListContactInformation" message="ApartmentService_ListContactInformation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListContactInformationResponse" message="ApartmentService_ListContactInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactInformation">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveContactInformation" message="ApartmentService_SaveContactInformation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveContactInformationResponse" message="ApartmentService_SaveContactInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListOrganisation">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListOrganisation" message="ApartmentService_ListOrganisation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListOrganisationResponse" message="ApartmentService_ListOrganisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListOrgAdminAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListOrgAdminAspUser" message="ApartmentService_ListOrgAdminAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListOrgAdminAspUserResponse" message="ApartmentService_ListOrgAdminAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganisations">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveOrganisations" message="ApartmentService_SaveOrganisations_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveOrganisationsResponse" message="ApartmentService_SaveOrganisations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganisation">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetOrganisation" message="ApartmentService_GetOrganisation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetOrganisationResponse" message="ApartmentService_GetOrganisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganisationByCode">
+      <wsdl:input wsaw:Action="urn:ApartmentService/GetOrganisationByCode" message="ApartmentService_GetOrganisationByCode_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/GetOrganisationByCodeResponse" message="ApartmentService_GetOrganisationByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSite">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListSite" message="ApartmentService_ListSite_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListSiteResponse" message="ApartmentService_ListSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSite">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveSite" message="ApartmentService_SaveSite_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveSiteResponse" message="ApartmentService_SaveSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCustomer">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListCustomer" message="ApartmentService_ListCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListCustomerResponse" message="ApartmentService_ListCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveCustomer" message="ApartmentService_SaveCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveCustomerResponse" message="ApartmentService_SaveCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctor">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListDoctor" message="ApartmentService_ListDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListDoctorResponse" message="ApartmentService_ListDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDoctor">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveDoctor" message="ApartmentService_SaveDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveDoctorResponse" message="ApartmentService_SaveDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAspUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListAspUser" message="ApartmentService_ListAspUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListAspUserResponse" message="ApartmentService_ListAspUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserName">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListUserName" message="ApartmentService_ListUserName_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListUserNameResponse" message="ApartmentService_ListUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembershipUserName">
+      <wsdl:input wsaw:Action="urn:ApartmentService/UpdateMembershipUserName" message="ApartmentService_UpdateMembershipUserName_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/UpdateMembershipUserNameResponse" message="ApartmentService_UpdateMembershipUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListComponent">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListComponent" message="ApartmentService_ListComponent_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListComponentResponse" message="ApartmentService_ListComponent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRoleComponentPermission">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListRoleComponentPermission" message="ApartmentService_ListRoleComponentPermission_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListRoleComponentPermissionResponse" message="ApartmentService_ListRoleComponentPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRoleComponentPermissionByUser">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListRoleComponentPermissionByUser" message="ApartmentService_ListRoleComponentPermissionByUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListRoleComponentPermissionByUserResponse" message="ApartmentService_ListRoleComponentPermissionByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleComponentPermission">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveRoleComponentPermission" message="ApartmentService_SaveRoleComponentPermission_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveRoleComponentPermissionResponse" message="ApartmentService_SaveRoleComponentPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAspRole">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListAspRole" message="ApartmentService_ListAspRole_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListAspRoleResponse" message="ApartmentService_ListAspRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAspRole">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveAspRole" message="ApartmentService_SaveAspRole_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveAspRoleResponse" message="ApartmentService_SaveAspRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserRoleAuth">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListUserRoleAuth" message="ApartmentService_ListUserRoleAuth_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListUserRoleAuthResponse" message="ApartmentService_ListUserRoleAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserRoleAuth">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveUserRoleAuth" message="ApartmentService_SaveUserRoleAuth_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveUserRoleAuthResponse" message="ApartmentService_SaveUserRoleAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMedicine">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListMedicine" message="ApartmentService_ListMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListMedicineResponse" message="ApartmentService_ListMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMedicine">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveMedicine" message="ApartmentService_SaveMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveMedicineResponse" message="ApartmentService_SaveMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSiteMedicineStatus">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListSiteMedicineStatus" message="ApartmentService_ListSiteMedicineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListSiteMedicineStatusResponse" message="ApartmentService_ListSiteMedicineStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMedicineInput">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListMedicineInput" message="ApartmentService_ListMedicineInput_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListMedicineInputResponse" message="ApartmentService_ListMedicineInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMedicineInput">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveMedicineInput" message="ApartmentService_SaveMedicineInput_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveMedicineInputResponse" message="ApartmentService_SaveMedicineInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListService">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListService" message="ApartmentService_ListService_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListServiceResponse" message="ApartmentService_ListService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveService">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveService" message="ApartmentService_SaveService_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveServiceResponse" message="ApartmentService_SaveService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListImage">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListImage" message="ApartmentService_ListImage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListImageResponse" message="ApartmentService_ListImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveImage" message="ApartmentService_SaveImage_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveImageResponse" message="ApartmentService_SaveImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTreatment">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListTreatment" message="ApartmentService_ListTreatment_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListTreatmentResponse" message="ApartmentService_ListTreatment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTreatment">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveTreatment" message="ApartmentService_SaveTreatment_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveTreatmentResponse" message="ApartmentService_SaveTreatment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTreatmentMedicine">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListTreatmentMedicine" message="ApartmentService_ListTreatmentMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListTreatmentMedicineResponse" message="ApartmentService_ListTreatmentMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTreatmentMedicine">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveTreatmentMedicine" message="ApartmentService_SaveTreatmentMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveTreatmentMedicineResponse" message="ApartmentService_SaveTreatmentMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTreatmentService">
+      <wsdl:input wsaw:Action="urn:ApartmentService/ListTreatmentService" message="ApartmentService_ListTreatmentService_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/ListTreatmentServiceResponse" message="ApartmentService_ListTreatmentService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTreatmentService">
+      <wsdl:input wsaw:Action="urn:ApartmentService/SaveTreatmentService" message="ApartmentService_SaveTreatmentService_InputMessage" />
+      <wsdl:output wsaw:Action="urn:ApartmentService/SaveTreatmentServiceResponse" message="ApartmentService_SaveTreatmentService_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

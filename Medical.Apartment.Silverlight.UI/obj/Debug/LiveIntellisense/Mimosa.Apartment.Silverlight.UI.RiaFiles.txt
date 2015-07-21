@@ -1,0 +1,2 @@
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Silverlight.UI
+Generated_Code\Mimosa.Apartment.Web.UI.g.cs

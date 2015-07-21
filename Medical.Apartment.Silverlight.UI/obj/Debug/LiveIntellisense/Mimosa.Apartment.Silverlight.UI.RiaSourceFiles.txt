@@ -1,0 +1,3 @@
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Web.UI\Mimosa.Apartment.Web.UI.csproj,635718803704315868,code\Globals.cs,code\OrganisationSettings.cs,code\Silverlight.cs,code\MimosaSettings.cs,code\MimosaSettingsShared.cs,Logon.aspx.cs,Logon.aspx.designer.cs,Logout.aspx.cs,Properties\Resources.Designer.cs,RecoverPassword.aspx.cs,Default.aspx.cs,Register.aspx.cs,Register.aspx.designer.cs,Shared\SilverlightMinWidthResizer.ascx.cs,Shared\SilverlightMinWidthResizer.ascx.designer.cs,Services\ApartmentService.svc.cs,
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Business\Medical.Apartment.Business.csproj,635718800645979705,ApartmentMethods.cs,Properties\AssemblyInfo.cs,
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Common\Mimosa.Apartment.Common.csproj,504911484000000000,

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Medical.Apartment.Web.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Medical.Apartment.Web.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" />
+  <xs:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:49666/Services/ApartmentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserLogin">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="AspUser" nillable="true" type="q1:AspUser" />
+      <xs:element minOccurs="0" name="IsUserOrganisationAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUserPortalAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUserSecurityAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUserSiteAdministrator" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="RoleComponentPermissions" nillable="true" type="q2:ArrayOfRoleComponentPermission" />
+      <xs:element minOccurs="0" name="UserEmployeeId" nillable="true" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UserLicenseKeys" nillable="true" type="q3:ArrayOfguid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="UserOrganisation" nillable="true" type="q4:Organisation" />
+      <xs:element minOccurs="0" name="UserOrganisationId" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="UserRoleAuths" nillable="true" type="q5:ArrayOfUserRoleAuth" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="UserSite" nillable="true" type="q6:Site" />
+      <xs:element minOccurs="0" name="UserSiteId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UserUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserLogin" nillable="true" type="tns:UserLogin" />
+  <xs:complexType name="AppSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTimeFormatCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GloblaCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberFormatCulture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportLocalization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportServerUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VirtualDirectory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppSettings" nillable="true" type="tns:AppSettings" />
+  <xs:complexType name="GlobalVariable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppSettings" nillable="true" type="tns:AppSettings" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Medical.Apartment.Common" minOccurs="0" name="TagVersion" nillable="true" type="q7:TagVersion" />
+      <xs:element minOccurs="0" name="UserLogin" nillable="true" type="tns:UserLogin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlobalVariable" nillable="true" type="tns:GlobalVariable" />
+</xs:schema>

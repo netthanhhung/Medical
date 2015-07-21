@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode
+	title="[A]dmin"
+	description="Administration"
+	moduleType="Administration">
+	<siteMapNode
+	  url="/HomePage.xaml"
+	  title="Home"
+	  description="Home Page"/>
+	<siteMapNode
+	  url="Logon.aspx?Logout=true"
+	  title="Logout"
+	  description="Logout"/>
+   <siteMapNode
+	  title="Security"
+	  description="Security">
+		<siteMapNode
+		  url="/Security/ChangePasswordPage.xaml"
+		  title="Change Password"
+		  description="Change Password"/>
+		<siteMapNode
+		  url="/Security/UserAccountPage.xaml"
+		  title="User Account Admin"
+		  description="User Account Admin"/>	
+		<siteMapNode
+		  url="/Security/RoleAdminPage.xaml"
+		  title="Role Admin"
+		  description="Role Admin"/>			  
+	    <siteMapNode
+			url="/Security/RoleComponentAdminPage.xaml"
+			title="Role Component Permission"
+			description="Role Component Permission"/>	
+		<siteMapNode
+		  url="/Security/UserRoleAuthAdminPage.xaml"
+		  title="User Role Auth Admin"
+		  description="User Role Auth Admin"/>	
+	</siteMapNode>
+    <siteMapNode
+	  title="Administration"
+	  description="Administration">
+
+		<siteMapNode
+		  url="/Administration/PortalAdminPage.xaml"
+		  title="Organisagion Administration"
+		  description="Organisagion Administration"/>
+		<siteMapNode
+		  url="/Administration/SiteAdminPage.xaml"
+		  title="Site Administration"
+		  description="Site Administration"/>
+		<siteMapNode
+		  url="/Administration/MedicineAdminPage.xaml"
+		  title="Medicine Administration"
+		  description="Medicine Administration"/>
+	   <siteMapNode
+		  url="/Administration/ServiceAdminPage.xaml"
+		  title="Service Administration"
+		  description="Service Administration"/>
+	  <siteMapNode
+			url="/Customer/DoctorAdminPage.xaml"
+			title="Doctors"
+			description="Doctors"/>
+     </siteMapNode>
+  </siteMapNode>
+
+  <siteMapNode
+	title="[C]ustomer"
+	description="Customer"
+	moduleType="Customer">
+
+	<siteMapNode
+		url="/Customer/CustomerAdminPage.xaml"
+		title="Customer Admin"
+		description="Customer Admin"/>
+		
+	<siteMapNode
+		url="/Customer/TreatmentAdminPage.xaml"
+		title="Monthly treatment"
+		description="Monthly treatment"/>	
+		
+	<siteMapNode
+		url="/Customer/MedicineInputAdminPage.xaml"
+		title="Medicine monthly input"
+		description="Medicine monthly input"/>
+		
+  </siteMapNode>
+ 
+  
+</siteMap>

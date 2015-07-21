@@ -1,0 +1,12 @@
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Medical.Apartment.Data.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Medical.Apartment.Data.pdb
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Medical.Apartment.Common.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Microsoft.Practices.Unity.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\bin\Debug\Medical.Apartment.Common.pdb
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\obj\Debug\Medical.Apartment.Data.csprojResolveAssemblyReference.cache
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\obj\Debug\Medical.Apartment.Data.dll
+E:\Chanh\Solution\Medical\Mimosa.Apartment.Data\obj\Debug\Medical.Apartment.Data.pdb
